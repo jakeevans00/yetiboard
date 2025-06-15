@@ -12,9 +12,8 @@ points:
       anchor: 
       columns:
         outer:
-          rows:
-          
-            bottom: $unset
+          rows.top.skip: true
+          rows.bottom.skip: true
         pinky:
         ring.key:
           stagger: 12
