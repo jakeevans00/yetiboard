@@ -5,7 +5,8 @@ units:
   cy: 17
 
 points:
-
+  mirror: 
+    distance: 20cy
   zones:
     main:
       rotate: 3
