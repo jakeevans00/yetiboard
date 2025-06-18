@@ -1,25 +1,28 @@
 meta.author: 'Jake Evans'
 
 units: 
-  cx: 18
-  cy: 17
+  kx: cx
+  ky: cy
+
+  px: cx + 2
+  py: cy +2
 
 points:
-  mirror: 
-    distance: 20cy
   zones:
     main:
-      rotate: 3
-      anchor: 
+      rotate: 2
+      key: 
+        padding: 1ky
+        spread: 1kx
       columns:
         outer:
           rows.top.skip: true
           rows.bottom.skip: true
         pinky:
         ring.key:
-          stagger: 12
+          stagger: 10
         middle.key: 
-          stagger: 6
+          stagger: 8
         index.key:
           stagger: -6
         inner.key:
@@ -29,22 +32,42 @@ points:
         home:
         top:
     thumbs:
-      rotate: 0
       anchor:
         ref: main_index_bottom
-        shift: [-.3cx,-1.25cx]
+        shift: [-.2kx,-1.5ky]
+        rotate: 9
       columns:
         close.key:
+          splay: -10
         mid.key:
           splay: -10
-          shift: [2.5,-1]
+          shift: [1.25, -2]
         far.key:
-          splay: -10
-          shift: [6.5,2]
+          splay: -12
+          shift: [3.25, -4]
       rows.home.key: 
+  mirror: &mirror
+    ref: main_inner_bottom
+    distance: 5kx
+
+outlines:
+  raw: 
+    - what: rectangle
+      where: true
+      size: [px + 4, py + 2]
+  keys: 
+    - what: rectangle
+      where: true
+      size: [kx-0.5, ky-0.5]
+  board: # This will be your main board outline
+    - what: rectangle
+      where: true
+      size: [px + 4, py + 2]
+      fillet: 2
+    - what: rectangle
+      where: main_inner_top, main_inner_bottom
+      size: [4, 4]
 
 
+  
 
-
-
-      
