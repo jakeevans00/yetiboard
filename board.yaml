@@ -59,15 +59,39 @@ outlines:
     - what: rectangle
       where: true
       size: [kx-0.5, ky-0.5]
-  board: # This will be your main board outline
+  board:
+    # base fill
     - what: rectangle
       where: true
-      size: [px + 4, py + 2]
+      size: [px+2, py+3]
+      fillet: 2
+
+    - what: rectangle
+      where: main_inner_home
+      size: [kx+46, ky+55]
       fillet: 2
     - what: rectangle
-      where: main_inner_top, main_inner_bottom
-      size: [4, 4]
+      where: main_inner_bottom
+      size: [kx+46, ky+36]
+    - what: rectangle
+      where: main_middle_bottom
+      size: [kx+46, ky+22]
 
+    - what: rectangle
+      where: main_index_bottom
+      size: [px+8.75, py+10]
 
+      # fix the thumb lines
+    - what: rectangle
+      where: thumbs_far_home
+      size: [px+2, py+3]
+    - what: rectangle
+      where: thumbs_close_home
+      size: [px+2, py+3]
   
 
+  
+  combo: 
+    - name: board
+    - operation: subtract
+      name: keys
