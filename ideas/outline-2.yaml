@@ -50,7 +50,6 @@ points:
     ref: main_inner_bottom
     distance: 5kx
 
-# i stole the basic stuff from the wubbo
 outlines:
   _bottom_arch_circle:
     - what: circle
