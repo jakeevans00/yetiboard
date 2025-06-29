@@ -60,10 +60,10 @@ outlines:
         shift: [-125, -525]
   _top_arch_circle:
     - what: circle
-      radius: 201
+      radius: 200
       where:
         ref: main_middle_bottom
-        shift: [25, -153]
+        shift: [5, -154]
   _main_body_circle:
     - what: circle
       radius: 75
@@ -91,3 +91,4 @@ outlines:
   switch_plate:
     [ combined, -_switch_cutouts]
   
+
