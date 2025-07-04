@@ -91,6 +91,4 @@ outlines:
   switch_plate:
     [ combined, -_switch_cutouts]
   
-pcb:
-	pcbs:
-		section - true
+
