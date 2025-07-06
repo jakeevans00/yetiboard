@@ -23,3 +23,10 @@ So for now, I've settled on a 38-key design. Taking a lot of ideas from my first
      BK DEL ESC    ENT TAB SPACE
 
 
+PCB Matrix: (Need 16 Pins)
+
+  C0 C1 C2 C3 C4 C5      C6 C7 C8 C9 C10 C11
+R1
+R2
+R3
+R4	
