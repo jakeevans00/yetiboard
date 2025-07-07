@@ -10,7 +10,7 @@ units:
 points:
   zones:
     main:
-
+      anchor.shift: [100, -150]
       key: 
         padding: 1ky
         spread: 1kx
@@ -90,5 +90,34 @@ outlines:
       size: [kx-0.5, ky-0.5]
   switch_plate:
     [ combined, -_switch_cutouts]
-  
-
+pcbs:
+  pcb:
+    outlines:
+      main:
+        outline: combined
+    footprints:
+      choc_hotswap: 
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: false
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [0, -5]
+      promicro:
+        what: promicro
+        params:
+          orientation: "down"
+        where:
+          ref.aggregate.parts: [main_inner_top, mirror_main_inner_top]
+          shift: [-18,-20]
+          rotate: -90
